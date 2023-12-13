@@ -22,8 +22,8 @@ router.post("/payment", async (req, res) => {
             payment_method_types: ["card"],
             line_items: lineItems,
             mode: 'payment',
-            success_url: `http://localhost:3000/success/${req.body.products[0].userId}`,
-            cancel_url: 'http://localhost:3000/cancel',
+            success_url: `https://shoppy-mern-abhishek.netlify.app/success/${req.body.products[0].userId}`,
+            cancel_url: 'https://shoppy-mern-abhishek.netlify.app/cancel',
         });
         res.json({ id: session.id })
     } catch (err) {

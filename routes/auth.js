@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
                 const { password, ...others } = loginUser._doc
                 res.status(200).json({ ...others, accessToken })
             } else {
-                res.status(500).json("Wrong Password!")
+                res.status(501).json("Wrong Password!")
             }
         } else {
             res.status(500).json("No user found!. Please create an account")
